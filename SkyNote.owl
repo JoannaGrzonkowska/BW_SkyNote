@@ -230,6 +230,16 @@
     
 
 
+    <!-- http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#nadanieAdministratora -->
+
+    <owl:ObjectProperty rdf:about="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#nadanieAdministratora">
+        <rdfs:domain rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#NadanieAdministratora"/>
+        <rdfs:range rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#Osoba"/>
+        <rdfs:subPropertyOf rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#participant"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#nalezyDoKategorii -->
 
     <owl:ObjectProperty rdf:about="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#nalezyDoKategorii">
@@ -983,6 +993,28 @@ Typy: Koncert</rdfs:comment>
     
 
 
+    <!-- http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#NadanieAdministratora -->
+
+    <owl:Class rdf:about="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#NadanieAdministratora">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#nadanieAdministratora"/>
+                <owl:onClass rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#Osoba"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#nadanieAdministratora"/>
+                <owl:someValuesFrom rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#Grupa"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#OperacjaNaGrupie"/>
+        <rdfs:comment>Zdarzenie nadania wybranej Osobie roli Administratora względem Grupy.</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#NonPhysicalEndurant -->
 
     <owl:Class rdf:about="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#NonPhysicalEndurant">
@@ -1194,7 +1226,7 @@ Typy: Koncert</rdfs:comment>
 
     <owl:Class rdf:about="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#PrzestrzenGeograficzna">
         <rdfs:subClassOf rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#Region"/>
-        <rdfs:comment>//TODO</rdfs:comment>
+        <rdfs:comment>Klasa reprezentjąca obszar punktów geograficznych.</rdfs:comment>
     </owl:Class>
     
 
@@ -1260,6 +1292,7 @@ Typy: Koncert</rdfs:comment>
     <!-- http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#Punkt -->
 
     <owl:Class rdf:about="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#Punkt">
+        <rdfs:subClassOf rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#PrzestrzenGeograficzna"/>
         <rdfs:subClassOf rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#Quale"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -1547,7 +1580,7 @@ Typy: Koncert</rdfs:comment>
                 <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment>//TODO</rdfs:comment>
+        <rdfs:comment>Klasa przygotowana by gromadzić informacje o położeniu geograficznym.</rdfs:comment>
     </owl:Class>
 </rdf:RDF>
 
