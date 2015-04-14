@@ -720,6 +720,7 @@
 
     <owl:Class rdf:about="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#Administrator">
         <rdfs:subClassOf rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#Osoba"/>
+        <rdfs:comment>Użytkownik, który w ramach określonej grupy pełni funkcje administracyjne. Administrować można wiele grup, ale każdą tylko jedną osobą jednocześnie.</rdfs:comment>
     </owl:Class>
     
 
@@ -751,7 +752,8 @@
                 <owl:someValuesFrom rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#Osoba"/>
             </owl:Restriction>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#OperacjeNaGrupie"/>
+        <rdfs:subClassOf rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#OperacjaNaGrupie"/>
+        <rdfs:comment>Zdarzenie dodania Osoby/Osób do wybranej Grupy.</rdfs:comment>
     </owl:Class>
     
 
@@ -773,7 +775,9 @@
                 <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
             </owl:Restriction>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#OperacjeNaGrupie"/>
+        <rdfs:subClassOf rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#OperacjaNaGrupie"/>
+        <rdfs:comment>Zdarzenie dokonania zmian w Grupie przez jej Administratora (jako jedynego uprawnionego). 
+Przykład: Zmiana opisu grupy.</rdfs:comment>
     </owl:Class>
     
 
@@ -795,7 +799,8 @@
                 <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
             </owl:Restriction>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#OperacjeNaKomentarzu"/>
+        <rdfs:subClassOf rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#OperacjaNaKomentarzu"/>
+        <rdfs:comment>Zdarzenie dokonania zmian w Komentarzu.</rdfs:comment>
     </owl:Class>
     
 
@@ -817,7 +822,8 @@
                 <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
             </owl:Restriction>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#OperacjeNaNotatce"/>
+        <rdfs:subClassOf rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#OperacjaNaNotatce"/>
+        <rdfs:comment>Zdarzenie dokonania zmian w Notatce.</rdfs:comment>
     </owl:Class>
     
 
@@ -914,6 +920,7 @@
                 <owl:someValuesFrom rdf:resource="&xsd;string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment>Podzbiór wszystkich użytkowników programu. Stworzony zostać może przez dowolną osobę i administorwany musi być przez dokładnie 1 osobę (nazywaną względem niej &quot;Administratorem&quot;).</rdfs:comment>
     </owl:Class>
     
 
@@ -934,6 +941,10 @@
                 <owl:someValuesFrom rdf:resource="&xsd;string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment>ogólne określenie ktegorii, do której można zklasyfikować Notatki, pozwalające określić jej tematykę. Zawiera bardziej szczegółowe Typy.
+Przykład:
+Kategoria: Wydarzenie Jednorazowe
+Typy: Koncert</rdfs:comment>
     </owl:Class>
     
 
@@ -967,6 +978,7 @@
                 <owl:someValuesFrom rdf:resource="&xsd;string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment>Pojedynczy byt reprezentujący wypowiedź określonej osoby w formie tekstowej na temat Notatki, do której został przypisany.</rdfs:comment>
     </owl:Class>
     
 
@@ -1000,6 +1012,13 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#trescNotatki"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#jestTypu"/>
                 <owl:someValuesFrom rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#TypNotatki"/>
             </owl:Restriction>
@@ -1025,20 +1044,15 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#tematNotatki"/>
-                <owl:someValuesFrom rdf:resource="&xsd;string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#dataModyfikacjiNotatki"/>
                 <owl:someValuesFrom rdf:resource="&xsd;dateTime"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#trescNotatki"/>
-                <owl:someValuesFrom rdf:resource="&xsd;string"/>
+                <owl:onProperty rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#tematNotatki"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1047,6 +1061,7 @@
                 <owl:someValuesFrom rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#Obraz"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment>Pojedynczy byt notatki, stanowiącej kluczowy obiekt aplikacji SkyNote. Stanowi opakowanie informacji przypisanych do miejsca. Wyszczególnia swój temat i treść, z możliwą zawartością obrazów. Tworzone są przez użytkowników, którzy zezwalają na ich wyświetlanie, czyli &quot;udostępniają&quot; je dla wybranych przez siebie grup.</rdfs:comment>
     </owl:Class>
     
 
@@ -1055,30 +1070,34 @@
 
     <owl:Class rdf:about="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#Obraz">
         <rdfs:subClassOf rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#PhysicalObject"/>
+        <rdfs:comment>Pojedynczy obraz (w formie pliku) podawany przez użytkownika do notatki.</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#OperacjeNaGrupie -->
+    <!-- http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#OperacjaNaGrupie -->
 
-    <owl:Class rdf:about="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#OperacjeNaGrupie">
+    <owl:Class rdf:about="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#OperacjaNaGrupie">
         <rdfs:subClassOf rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#Event"/>
+        <rdfs:comment>Zadarzenia zachodzące względem Grup.</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#OperacjeNaKomentarzu -->
+    <!-- http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#OperacjaNaKomentarzu -->
 
-    <owl:Class rdf:about="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#OperacjeNaKomentarzu">
+    <owl:Class rdf:about="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#OperacjaNaKomentarzu">
         <rdfs:subClassOf rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#Event"/>
+        <rdfs:comment>Zadarzenia zachodzące względem Komentarzy.</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#OperacjeNaNotatce -->
+    <!-- http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#OperacjaNaNotatce -->
 
-    <owl:Class rdf:about="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#OperacjeNaNotatce">
+    <owl:Class rdf:about="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#OperacjaNaNotatce">
         <rdfs:subClassOf rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#Event"/>
+        <rdfs:comment>Zadarzenia zachodzące względem Notatek.</rdfs:comment>
     </owl:Class>
     
 
@@ -1111,6 +1130,7 @@
                 <owl:someValuesFrom rdf:resource="&xsd;string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment>Pojedyncza osoba użytkująca aplikacje SkyNote. Obejmuje wszystkich użytkowników, niezależnie od grupy czy przwilejów.</rdfs:comment>
     </owl:Class>
     
 
@@ -1174,6 +1194,7 @@
 
     <owl:Class rdf:about="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#PrzestrzenGeograficzna">
         <rdfs:subClassOf rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#Region"/>
+        <rdfs:comment>//TODO</rdfs:comment>
     </owl:Class>
     
 
@@ -1201,7 +1222,8 @@
                 <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
             </owl:Restriction>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#OperacjeNaNotatce"/>
+        <rdfs:subClassOf rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#OperacjaNaNotatce"/>
+        <rdfs:comment>Zdarzenie przypisania Obrazu/ów do Notatki.</rdfs:comment>
     </owl:Class>
     
 
@@ -1229,7 +1251,8 @@
                 <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
             </owl:Restriction>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#OperacjeNaNotatce"/>
+        <rdfs:subClassOf rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#OperacjaNaNotatce"/>
+        <rdfs:comment>Zdarzenie przypisania Notatki do wybranej/ych Grupy/ów. Będzie ona widoczna wyłącznie dla Osób których grupa został tak przypisana.</rdfs:comment>
     </owl:Class>
     
 
@@ -1256,6 +1279,7 @@
                 <owl:someValuesFrom rdf:resource="&xsd;double"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment>Pojedynczy punkt w przestrzeni, składający się z  3 współrzędnych pozwalających. </rdfs:comment>
     </owl:Class>
     
 
@@ -1360,7 +1384,8 @@
                 <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
             </owl:Restriction>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#OperacjeNaGrupie"/>
+        <rdfs:subClassOf rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#OperacjaNaGrupie"/>
+        <rdfs:comment>Zdarzenie utworzenia Grupy, co może zrobić każdaa Osoba użytkująca aplikację.</rdfs:comment>
     </owl:Class>
     
 
@@ -1382,7 +1407,8 @@
                 <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
             </owl:Restriction>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#OperacjeNaKomentarzu"/>
+        <rdfs:subClassOf rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#OperacjaNaKomentarzu"/>
+        <rdfs:comment>Zdarzenie tworzenia Komentarza.</rdfs:comment>
     </owl:Class>
     
 
@@ -1404,7 +1430,8 @@
                 <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
             </owl:Restriction>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#OperacjeNaNotatce"/>
+        <rdfs:subClassOf rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#OperacjaNaNotatce"/>
+        <rdfs:comment>Zdarzenie tworzenia Notatki.</rdfs:comment>
     </owl:Class>
     
 
@@ -1412,6 +1439,13 @@
     <!-- http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#TypNotatki -->
 
     <owl:Class rdf:about="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#TypNotatki">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#nalezyDoKategorii"/>
+                <owl:onClass rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#KategoriaNotatki"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#Quality"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -1425,6 +1459,10 @@
                 <owl:someValuesFrom rdf:resource="&xsd;string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment>Dokładne określenie typu Notatki, pozwalające określić jej tematykę. Należy do ogólniejszych Kategorii.
+Przykład:
+Kategoria: Wydarzenie Jednorazowe
+Typy: Koncert</rdfs:comment>
     </owl:Class>
     
 
@@ -1446,7 +1484,8 @@
                 <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
             </owl:Restriction>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#OperacjeNaGrupie"/>
+        <rdfs:subClassOf rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#OperacjaNaGrupie"/>
+        <rdfs:comment>Zdarzenie usunięcia Grupy przez jej Administratora (jako uprawnionego)</rdfs:comment>
     </owl:Class>
     
 
@@ -1468,7 +1507,8 @@
                 <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
             </owl:Restriction>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#OperacjeNaKomentarzu"/>
+        <rdfs:subClassOf rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#OperacjaNaKomentarzu"/>
+        <rdfs:comment>Zdarzenie usunięcia Komentarza.</rdfs:comment>
     </owl:Class>
     
 
@@ -1490,7 +1530,8 @@
                 <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
             </owl:Restriction>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#OperacjeNaNotatce"/>
+        <rdfs:subClassOf rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#OperacjaNaNotatce"/>
+        <rdfs:comment>Zdarzenie usunięcia Notatki.</rdfs:comment>
     </owl:Class>
     
 
@@ -1506,6 +1547,7 @@
                 <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment>//TODO</rdfs:comment>
     </owl:Class>
 </rdf:RDF>
 
