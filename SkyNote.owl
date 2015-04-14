@@ -30,6 +30,38 @@
     
 
 
+    <!-- http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#edytujeGrupe -->
+
+    <owl:ObjectProperty rdf:about="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#edytujeGrupe">
+        <rdfs:range rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#Administrator"/>
+        <rdfs:domain rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#EdytowanieGrupy"/>
+        <rdfs:subPropertyOf rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#participant"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#edytujeKomentarz -->
+
+    <owl:ObjectProperty rdf:about="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#edytujeKomentarz">
+        <rdfs:domain rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#EdytowanieKomentarza"/>
+        <rdfs:range rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#Komentarz"/>
+        <rdfs:range rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#Osoba"/>
+        <rdfs:subPropertyOf rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#participant"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#edytujeNotatke -->
+
+    <owl:ObjectProperty rdf:about="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#edytujeNotatke">
+        <rdfs:domain rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#EdytowanieNotatki"/>
+        <rdfs:range rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#Notatka"/>
+        <rdfs:range rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#Osoba"/>
+        <rdfs:subPropertyOf rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#participant"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#exactLocation -->
 
     <owl:ObjectProperty rdf:about="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#exactLocation">
@@ -201,6 +233,26 @@
     
 
 
+    <!-- http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#posidaObraz -->
+
+    <owl:ObjectProperty rdf:about="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#posidaObraz">
+        <rdfs:domain rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#Notatka"/>
+        <rdfs:range rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#Obraz"/>
+        <rdfs:subPropertyOf rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#part"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#przypisujeObraz -->
+
+    <owl:ObjectProperty rdf:about="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#przypisujeObraz">
+        <rdfs:range rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#Obraz"/>
+        <rdfs:domain rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#PrzypisanieObrazu"/>
+        <rdfs:subPropertyOf rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#participant"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#q-location -->
 
     <owl:ObjectProperty rdf:about="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#q-location">
@@ -250,6 +302,70 @@
     
 
 
+    <!-- http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#tworzyGrupe -->
+
+    <owl:ObjectProperty rdf:about="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#tworzyGrupe">
+        <rdfs:range rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#Osoba"/>
+        <rdfs:domain rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#TworzenieGrupy"/>
+        <rdfs:subPropertyOf rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#participant"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#tworzyKomentarz -->
+
+    <owl:ObjectProperty rdf:about="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#tworzyKomentarz">
+        <rdfs:range rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#Komentarz"/>
+        <rdfs:range rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#Osoba"/>
+        <rdfs:domain rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#TworzenieKomentarza"/>
+        <rdfs:subPropertyOf rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#participant"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#tworzyNotatke -->
+
+    <owl:ObjectProperty rdf:about="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#tworzyNotatke">
+        <rdfs:range rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#Notatka"/>
+        <rdfs:range rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#Osoba"/>
+        <rdfs:domain rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#TworzenieNotatki"/>
+        <rdfs:subPropertyOf rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#participant"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#usuwaGrupe -->
+
+    <owl:ObjectProperty rdf:about="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#usuwaGrupe">
+        <rdfs:range rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#Administrator"/>
+        <rdfs:domain rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#UsuwanieGrupy"/>
+        <rdfs:subPropertyOf rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#participant"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#usuwaKomentarz -->
+
+    <owl:ObjectProperty rdf:about="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#usuwaKomentarz">
+        <rdfs:range rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#Komentarz"/>
+        <rdfs:range rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#Osoba"/>
+        <rdfs:domain rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#UsuwanieKomentarza"/>
+        <rdfs:subPropertyOf rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#participant"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#usuwaNotatke -->
+
+    <owl:ObjectProperty rdf:about="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#usuwaNotatke">
+        <rdfs:range rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#Notatka"/>
+        <rdfs:range rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#Osoba"/>
+        <rdfs:domain rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#UsuwanieNotatki"/>
+        <rdfs:subPropertyOf rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#participant"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -258,6 +374,15 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#dataModyfikacjiGrupy -->
+
+    <owl:DatatypeProperty rdf:about="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#dataModyfikacjiGrupy">
+        <rdfs:subPropertyOf rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#mediatedAttribute"/>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+    </owl:DatatypeProperty>
     
 
 
@@ -275,6 +400,16 @@
 
     <owl:DatatypeProperty rdf:about="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#dataModyfikacjiNotatki">
         <rdfs:domain rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#Notatka"/>
+        <rdfs:subPropertyOf rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#mediatedAttribute"/>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#dataUtworzeniaGrupy -->
+
+    <owl:DatatypeProperty rdf:about="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#dataUtworzeniaGrupy">
+        <rdfs:domain rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#Grupa"/>
         <rdfs:subPropertyOf rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#mediatedAttribute"/>
         <rdfs:range rdf:resource="&xsd;dateTime"/>
     </owl:DatatypeProperty>
@@ -435,6 +570,36 @@
     
 
 
+    <!-- http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#wspolrzednaX -->
+
+    <owl:DatatypeProperty rdf:about="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#wspolrzednaX">
+        <rdfs:domain rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#Miejsce"/>
+        <rdfs:subPropertyOf rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#mediatedAttribute"/>
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#wspolrzednaY -->
+
+    <owl:DatatypeProperty rdf:about="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#wspolrzednaY">
+        <rdfs:domain rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#Miejsce"/>
+        <rdfs:subPropertyOf rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#mediatedAttribute"/>
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#wspolrzednaZ -->
+
+    <owl:DatatypeProperty rdf:about="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#wspolrzednaZ">
+        <rdfs:domain rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#Miejsce"/>
+        <rdfs:subPropertyOf rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#mediatedAttribute"/>
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -456,6 +621,14 @@
     
 
 
+    <!-- http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#Administrator -->
+
+    <owl:Class rdf:about="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#Administrator">
+        <rdfs:subClassOf rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#Osoba"/>
+    </owl:Class>
+    
+
+
     <!-- http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#AmountOfMatter -->
 
     <owl:Class rdf:about="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#AmountOfMatter">
@@ -467,20 +640,64 @@
     
 
 
+    <!-- http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#DodanieDoGrupy -->
+
+    <owl:Class rdf:about="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#DodanieDoGrupy">
+        <rdfs:subClassOf rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#OperacjeNaGrupie"/>
+    </owl:Class>
+    
+
+
+    <!-- http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#EdytowanieGrupy -->
+
+    <owl:Class rdf:about="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#EdytowanieGrupy">
+        <rdfs:subClassOf rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#OperacjeNaGrupie"/>
+    </owl:Class>
+    
+
+
+    <!-- http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#EdytowanieKomentarza -->
+
+    <owl:Class rdf:about="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#EdytowanieKomentarza">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#participant"/>
+                <owl:someValuesFrom rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#Komentarz"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#participant"/>
+                <owl:someValuesFrom rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#Osoba"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#OperacjeNaKomentarzu"/>
+    </owl:Class>
+    
+
+
+    <!-- http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#EdytowanieNotatki -->
+
+    <owl:Class rdf:about="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#EdytowanieNotatki">
+        <rdfs:subClassOf rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#OperacjeNaNotatce"/>
+    </owl:Class>
+    
+
+
     <!-- http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#Endurant -->
 
     <owl:Class rdf:about="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#Endurant">
         <rdfs:subClassOf rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#SpatioTemporal"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#participantIn"/>
-                <owl:someValuesFrom rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#Perdurant"/>
+                <owl:onProperty rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#part"/>
+                <owl:allValuesFrom rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#Endurant"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#part"/>
-                <owl:allValuesFrom rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#Endurant"/>
+                <owl:onProperty rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#participantIn"/>
+                <owl:someValuesFrom rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#Perdurant"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#Perdurant"/>
@@ -519,6 +736,14 @@
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#PhysicalObject"/>
         <rdfs:comment>Byt, którego istnienie zależne jest od jego bytu &quot;nadrzędnego&quot;, np. krawędź blatu stołu, dziura w serze, przestrzeń pod łóżkiem itp.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#FragmentPrzestrzeniGeograficznej -->
+
+    <owl:Class rdf:about="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#FragmentPrzestrzeniGeograficznej">
+        <rdfs:subClassOf rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#Region"/>
     </owl:Class>
     
 
@@ -589,6 +814,32 @@
     
 
 
+    <!-- http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#Miejsce -->
+
+    <owl:Class rdf:about="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#Miejsce">
+        <rdfs:subClassOf rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#PhysicalObject"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#wspolrzednaX"/>
+                <owl:someValuesFrom rdf:resource="&xsd;double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#wspolrzednaZ"/>
+                <owl:someValuesFrom rdf:resource="&xsd;double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#wspolrzednaY"/>
+                <owl:someValuesFrom rdf:resource="&xsd;double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
     <!-- http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#NonPhysicalEndurant -->
 
     <owl:Class rdf:about="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#NonPhysicalEndurant">
@@ -611,8 +862,8 @@
         <rdfs:subClassOf rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#PhysicalObject"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#trescNotatki"/>
-                <owl:someValuesFrom rdf:resource="&xsd;string"/>
+                <owl:onProperty rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#jestTypu"/>
+                <owl:someValuesFrom rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#TypNotatki"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -629,16 +880,48 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#jestTypu"/>
-                <owl:someValuesFrom rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#TypNotatki"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#dataModyfikacjiNotatki"/>
                 <owl:someValuesFrom rdf:resource="&xsd;dateTime"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#trescNotatki"/>
+                <owl:someValuesFrom rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#Obraz -->
+
+    <owl:Class rdf:about="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#Obraz">
+        <rdfs:subClassOf rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#PhysicalObject"/>
+    </owl:Class>
+    
+
+
+    <!-- http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#OperacjeNaGrupie -->
+
+    <owl:Class rdf:about="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#OperacjeNaGrupie">
+        <rdfs:subClassOf rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#Event"/>
+    </owl:Class>
+    
+
+
+    <!-- http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#OperacjeNaKomentarzu -->
+
+    <owl:Class rdf:about="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#OperacjeNaKomentarzu">
+        <rdfs:subClassOf rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#Event"/>
+    </owl:Class>
+    
+
+
+    <!-- http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#OperacjeNaNotatce -->
+
+    <owl:Class rdf:about="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#OperacjeNaNotatce">
+        <rdfs:subClassOf rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#Event"/>
     </owl:Class>
     
 
@@ -646,10 +929,16 @@
     <!-- http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#Osoba -->
 
     <owl:Class rdf:about="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#Osoba">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#partOf"/>
+                <owl:someValuesFrom rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#Grupa"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#PhysicalObject"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#imie"/>
+                <owl:onProperty rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#mail"/>
                 <owl:someValuesFrom rdf:resource="&xsd;string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -661,7 +950,7 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#mail"/>
+                <owl:onProperty rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#imie"/>
                 <owl:someValuesFrom rdf:resource="&xsd;string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -675,14 +964,14 @@
         <rdfs:subClassOf rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#SpatioTemporal"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#part"/>
-                <owl:allValuesFrom rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#Perdurant"/>
+                <owl:onProperty rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#participant"/>
+                <owl:someValuesFrom rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#Endurant"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#participant"/>
-                <owl:someValuesFrom rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#Endurant"/>
+                <owl:onProperty rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#part"/>
+                <owl:allValuesFrom rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#Perdurant"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#Quality"/>
@@ -720,6 +1009,22 @@
     <owl:Class rdf:about="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#Process">
         <rdfs:subClassOf rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#Stative"/>
         <rdfs:comment>Niejednolity &quot;statyczny&quot; byt rozciągnięty w czasie; np. lepienie pierogów, którego charakterystyczną cechą jest to, że składa się z kolejnych następujących po sobie faz: np. nabieranie farszu, nakładanie ciasta, wycinanie, zalepianie.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#PrzypisanieObrazu -->
+
+    <owl:Class rdf:about="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#PrzypisanieObrazu">
+        <rdfs:subClassOf rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#OperacjeNaNotatce"/>
+    </owl:Class>
+    
+
+
+    <!-- http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#PrzypisywanieGrupie -->
+
+    <owl:Class rdf:about="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#PrzypisywanieGrupie">
+        <rdfs:subClassOf rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#OperacjeNaNotatce"/>
     </owl:Class>
     
 
@@ -807,22 +1112,70 @@
     
 
 
+    <!-- http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#TworzenieGrupy -->
+
+    <owl:Class rdf:about="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#TworzenieGrupy">
+        <rdfs:subClassOf rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#OperacjeNaGrupie"/>
+    </owl:Class>
+    
+
+
+    <!-- http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#TworzenieKomentarza -->
+
+    <owl:Class rdf:about="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#TworzenieKomentarza">
+        <rdfs:subClassOf rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#OperacjeNaKomentarzu"/>
+    </owl:Class>
+    
+
+
+    <!-- http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#TworzenieNotatki -->
+
+    <owl:Class rdf:about="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#TworzenieNotatki">
+        <rdfs:subClassOf rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#OperacjeNaNotatce"/>
+    </owl:Class>
+    
+
+
     <!-- http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#TypNotatki -->
 
     <owl:Class rdf:about="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#TypNotatki">
         <rdfs:subClassOf rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#Quality"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#opisTypu"/>
+                <owl:onProperty rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#nazwaTypu"/>
                 <owl:someValuesFrom rdf:resource="&xsd;string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#nazwaTypu"/>
+                <owl:onProperty rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#opisTypu"/>
                 <owl:someValuesFrom rdf:resource="&xsd;string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#UsuwanieGrupy -->
+
+    <owl:Class rdf:about="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#UsuwanieGrupy">
+        <rdfs:subClassOf rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#OperacjeNaGrupie"/>
+    </owl:Class>
+    
+
+
+    <!-- http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#UsuwanieKomentarza -->
+
+    <owl:Class rdf:about="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#UsuwanieKomentarza">
+        <rdfs:subClassOf rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#OperacjeNaKomentarzu"/>
+    </owl:Class>
+    
+
+
+    <!-- http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#UsuwanieNotatki -->
+
+    <owl:Class rdf:about="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#UsuwanieNotatki">
+        <rdfs:subClassOf rdf:resource="http://km.pg.gda.pl/kmg/ontologies/2015/3/sweet_essence#OperacjeNaNotatce"/>
     </owl:Class>
 </rdf:RDF>
 
